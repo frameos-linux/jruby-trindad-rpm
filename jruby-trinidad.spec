@@ -1,4 +1,3 @@
-# Generated from trinidad-0.9.10.gem by gem2rpm -*- rpm-spec -*-
 %define ruby_sitelib %(jruby -rrbconfig -e "puts Config::CONFIG['sitelibdir']")
 %define gemdir %(jruby -rubygems -e 'puts Gem::dir' 2>/dev/null)
 %define gemname trinidad
@@ -6,7 +5,7 @@
 
 Summary: Simple library to run rails applications into an embedded Tomcat
 Name: jruby-%{gemname}
-Version: 0.9.10
+Version: 1.0.1
 Release: 1.frameos
 Group: Development/Languages
 License: GPLv2+ or Ruby
@@ -16,9 +15,6 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 Requires: jruby 
 Requires: jruby-trinidad-jars >= 0.3.0
 Requires: jruby-rack >= 1.0.2
-#Requires: rubygem(rspec) >= 0
-#Requires: rubygem(mocha) >= 0
-#Requires: rubygem(fakefs) >= 0
 BuildRequires: jruby 
 BuildArch: noarch
 Provides: jruby-%{gemname} = %{version}
@@ -57,5 +53,8 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri Nov 05 2010 : Sergio Rubio <rubiojr@frameos.org> - 1.0.1-1
+-  updated to trinidad 1.0.1
+
 * Fri Oct 15 2010 : Sergio Rubio <rubiojr@frameos.org> - 0.9.10-1
 - Initial package
