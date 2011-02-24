@@ -5,7 +5,7 @@
 
 Summary: Simple library to run rails applications into an embedded Tomcat
 Name: jruby-%{gemname}
-Version: 1.0.1
+Version: 1.0.5
 Release: 1.frameos
 Group: Development/Languages
 License: GPLv2+ or Ruby
@@ -13,7 +13,7 @@ URL: http://github.com/calavera/trinidad
 Source0: http://gemcutter.org/gems/%{gemname}-%{version}.gem
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 Requires: jruby 
-Requires: jruby-trinidad-jars >= 0.3.0
+Requires: jruby-trinidad-jars >= 1.0.0
 Requires: jruby-rack >= 1.0.2
 BuildRequires: jruby 
 BuildArch: noarch
@@ -53,8 +53,11 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Fri Nov 05 2010 : Sergio Rubio <rubiojr@frameos.org> - 1.0.1-1
+* Thu Feb 24 2011 Sergio Rubio <rubiojr@frameos.org> - 1.0.5-1
+- upstream update
+
+* Fri Nov 05 2010 Sergio Rubio <rubiojr@frameos.org> - 1.0.1-1
 -  updated to trinidad 1.0.1
 
-* Fri Oct 15 2010 : Sergio Rubio <rubiojr@frameos.org> - 0.9.10-1
+* Fri Oct 15 2010 Sergio Rubio <rubiojr@frameos.org> - 0.9.10-1
 - Initial package
